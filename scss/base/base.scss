@@ -1,0 +1,23 @@
+@use "./typography.scss" as*;
+
+* {
+  margin:0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #36454F;
+}
+
+a {
+  text-decoration:none;
+  color: inherit;
+}
+
+a,
+button {
+  cursor:pointer;
+}
+
+
+

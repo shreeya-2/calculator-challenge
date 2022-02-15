@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Calculator</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+<main class = "calculator" >
+  <input type="number" class="calculator--input"> 
+ 
+<section class = "calculator__buttons">
+  
+  <button class = "calc__button" type="clear" value="C" onclick="dis('C')"> C </button> 
+  <button class = "calc__button" type="button" value="+/-" onclick="dis('+/-')"> +/- </button> 
+  <button class = "calc__button" type="button" value="%" onclick="dis('%')"> % </button> 
+  <button class = "calc__button calc__button--func" type="button" value= "&divide" onclick="dis('&divide')"> &divide </button> 
+
+  <button class = "calc__button" type="button" value="7" onclick="dis('7')"> 7 </button> 
+  <button class = "calc__button" type="button" value="8" onclick="dis('8')"> 8 </button> 
+  <button class = "calc__button" type="button" value="9" onclick="dis('9')"> 9 </button> 
+  <button class = "calc__button calc__button--func" type="button" value="&times" onclick="dis('&times')"> &times </button> 
+
+  <button class = "calc__button" type="button" value="4" onclick="dis('4')"> 4 </button> 
+  <button class = "calc__button" type="button" value="5" onclick="dis('5')"> 5 </button> 
+  <button class = "calc__button" type="button" value="6" onclick="dis('6')"> 6 </button> 
+  <button class = "calc__button calc__button--func" type="button" value="-" onclick="dis('-')"> - </button> 
+
+  <button class = "calc__button" type="button" value="1" onclick="dis('1')"> 1 </button> 
+  <button class = "calc__button" type="button" value="2" onclick="dis('2')"> 2 </button> 
+  <button class = "calc__button" type="button" value="3" onclick="dis('3')"> 3 </button> 
+  <button class = "calc__button calc__button--func" type="button" value="+" onclick="dis('+')"> + </button> 
+
+  <button class = "calc__button calc__button--zero" type="button" value="0" onclick="dis('0')"> 0 </button> 
+  <button class = "calc__button" type="button" value="." onclick="dis('.')"> . </button>
+  <button class = "calc__button calc__button--equals" type="button" value="=" onclick="dis('=')"> = </button> 
+
+</section>
+
+
+</main>
+
+</body>
+</html>
