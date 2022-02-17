@@ -76,7 +76,7 @@ button {
   display: inline-block;
   text-align: center;
   line-height: 30%;
-  vertical-align: middle;
+  justify-self: center;
 }
 .calculator__buttons .calc__button--operator {
   background-color: #FFDB82;

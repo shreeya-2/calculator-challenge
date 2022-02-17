@@ -76,15 +76,21 @@ var onClearClick = function onClearClick(event) {
 clearButton.addEventListener("click", onClearClick);
 
 var onEqualsClick = function onEqualsClick(event) {
-  console.log(numberTwo, chosenOperation, numberOne);
+  if (typeof numberOne === "string" || typeof numberTwo === "string") {
+    numberOne = parseInt(numberOne);
+    numberTwo = parseInt(numberTwo);
+  }
+
+  console.log(chosenOperation);
 
   switch (chosenOperation) {
-    case '&times':
+    case '×':
       finalTotal = numberOne * numberTwo;
+      console.log("fired");
       break;
 
-    case '&divide':
-      finalTotal = numberOne / numberTwo;
+    case '÷':
+      finalTotal = numberTwo / numberOne;
       break;
 
     case '+':
@@ -92,7 +98,7 @@ var onEqualsClick = function onEqualsClick(event) {
       break;
 
     case '-':
-      finalTotal = numberOne - numberTwo;
+      finalTotal = numberTwo - numberOne;
       break;
   }
 
