@@ -1,14 +1,22 @@
 //reqs: Accept a minimum of 2 inputs, perform an operation and return the output.
 
-// console.log number inputs by user
+//save complete number into a global variable once operand is pressed
+  //INPUT operand --> register 
+    //store 
+    //OUTPUT in prev display section
+     //callback function to variable
 
-
+//INPUT numbers
+  //function
+  //console.log number inputs by user
+  //OUTPUT numbers in display on click
 
 //INPUT symbols/operators
   //function
   //OUTPUT first number + operator?
 
 //INPUT =
+  //clear display
   //OUTPUT total
 
 //INPUT +
@@ -33,26 +41,69 @@
 //
 
 // global variables     
-const numberButtons = document.querySelectorAll (".calc__button");
+const numberButtons = document.querySelectorAll (".calc__button--number");
 const operationButtons = document.querySelectorAll (".calc__button--operator");
 const clearButton = document.querySelector (".calc__button--clear")
 const equalsButton = document.querySelector (".calc__button--equals");
 const previousDisplay = document.querySelector (".previous-display");
 const currentDisplay = document.querySelector (".current-display");
+let numberOne; 
+let chosenOperation;
+let numberTwo;
+let finalTotal;
 
 //functions
 
-
-//INPUT numbers
-  //function
-  //OUTPUT numbers in display on click
-
 const onButtonClick = (event) => {
-  console.log (event.target.value);
   currentDisplay.innerHTML += (event.target.value);
+  numberOne = (event.target.value);
+  console.log(numberOne);
 }
   
 numberButtons.forEach ((button) => {
   button.addEventListener("click",onButtonClick)
 })
 
+
+const onOperationClick = (event) => {
+  numberOne = currentDisplay.innerHTML;
+  chosenOperation =(event.target.value);
+  currentDisplay.innerHTML = "";
+  previousDisplay.innerHTML = numberOne + chosenOperation;
+  numberTwo = numberOne;
+  numberOne = "";
+};
+      
+operationButtons.forEach ((button) => {
+  button.addEventListener("click",onOperationClick)
+});
+
+
+const onClearClick = (event) => {
+  currentDisplay.innerHTML = "";
+  previousDisplay.innerHTML = "";
+};
+  
+clearButton.addEventListener("click",onClearClick);
+
+
+const onEqualsClick = (event) => {
+  console.log(numberTwo, chosenOperation, numberOne);
+  switch (chosenOperation) {
+    case '&times':
+      finalTotal= (numberOne*numberTwo);
+      break;
+    case '&divide':
+      finalTotal= (numberOne/numberTwo);
+      break;  
+    case '+':
+      finalTotal= (numberOne+numberTwo);
+      break; 
+    case '-':
+      finalTotal= (numberOne-numberTwo);
+      break;     
+  } 
+  currentDisplay.innerHTML = finalTotal; 
+};
+
+equalsButton.addEventListener("click",onEqualsClick);

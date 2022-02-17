@@ -77,7 +77,6 @@ button {
   text-align: center;
   line-height: 30%;
   vertical-align: middle;
-  text-align: left;
 }
 .calculator__buttons .calc__button--operator {
   background-color: #FFDB82;
@@ -87,4 +86,5 @@ button {
 }
 .calculator__buttons .calc__button--zero {
   min-width: 10rem;
+  text-align: center;
 }

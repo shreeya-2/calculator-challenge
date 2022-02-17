@@ -32,7 +32,6 @@
       font-size: 2rem;
       color: rgb(85, 85, 85);
     }
-
   }
 }
 
@@ -63,7 +62,6 @@
     text-align: center;
     line-height: 30%;
     vertical-align: middle;
-    text-align: left;
     
 
     &--operator {
@@ -76,6 +74,7 @@
 
     &--zero {
       min-width:10rem;
+      text-align: center;
     }
   }
 }  
