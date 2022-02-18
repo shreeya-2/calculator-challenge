@@ -41,15 +41,16 @@ var deleteButton = document.querySelector(".calc__button--delete");
 var equalsButton = document.querySelector(".calc__button--equals");
 var previousDisplay = document.querySelector(".previous-display");
 var currentDisplay = document.querySelector(".current-display");
+var darkModeSwitch = document.querySelector(".switch");
 var numberOne;
 var chosenOperation;
 var numberTwo;
+var numberThree;
 var finalTotal; //functions
 
 var onButtonClick = function onButtonClick(event) {
   currentDisplay.innerHTML += event.target.value;
   numberOne = event.target.value;
-  console.log(numberOne);
 };
 
 numberButtons.forEach(function (button) {
@@ -88,7 +89,7 @@ var onEqualsClick = function onEqualsClick(event) {
     numberTwo = parseInt(numberTwo);
   }
 
-  console.log(chosenOperation);
+  ;
 
   switch (chosenOperation) {
     case '×':
@@ -108,7 +109,7 @@ var onEqualsClick = function onEqualsClick(event) {
       break;
 
     case '%':
-      finalTotal = (numberOne / 100 * numberTwo).fixedTo(2);
+      finalTotal = numberOne / 100 * numberTwo;
       break;
   }
 
@@ -116,3 +117,9 @@ var onEqualsClick = function onEqualsClick(event) {
 };
 
 equalsButton.addEventListener("click", onEqualsClick);
+
+var onSwitchClick = function onSwitchClick() {
+  previousDisplay.innerHTML = "switched on";
+};
+
+darkModeSwitch.addEventListener("click", onSwitchClick);

@@ -48,10 +48,12 @@ const deleteButton = document.querySelector (".calc__button--delete");
 const equalsButton = document.querySelector (".calc__button--equals");
 const previousDisplay = document.querySelector (".previous-display");
 const currentDisplay = document.querySelector (".current-display");
+const darkModeSwitch = document.querySelector (".switch");
 
 let numberOne; 
 let chosenOperation;
 let numberTwo;
+let numberThree;
 let finalTotal;
 
 //functions
@@ -59,7 +61,6 @@ let finalTotal;
 const onButtonClick = (event) => {
   currentDisplay.innerHTML += (event.target.value);
   numberOne = (event.target.value);
-  console.log(numberOne);
 }
   
 numberButtons.forEach ((button) => {
@@ -100,8 +101,7 @@ const onEqualsClick = (event) => {
   if (typeof numberOne === "string" || typeof numberTwo ==="string") {
     numberOne = parseInt(numberOne);
     numberTwo = parseInt(numberTwo);
-  }
-  console.log(chosenOperation);
+  }; 
 
   switch (chosenOperation) {
     case '×':
@@ -117,10 +117,17 @@ const onEqualsClick = (event) => {
       finalTotal= (numberTwo-numberOne);
       break;     
     case '%':
-      finalTotal= ((numberOne/100)*numberTwo).fixedTo(2);
+      finalTotal= ((numberOne/100)*numberTwo);
       break;  
   } 
   currentDisplay.innerHTML = finalTotal; 
 };
 
 equalsButton.addEventListener("click",onEqualsClick);
+
+
+const onSwitchClick = () => {
+  previousDisplay.innerHTML = "switched on";
+};
+
+darkModeSwitch.addEventListener ("click", onSwitchClick);
