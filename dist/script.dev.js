@@ -37,6 +37,7 @@
 var numberButtons = document.querySelectorAll(".calc__button--number");
 var operationButtons = document.querySelectorAll(".calc__button--operator");
 var clearButton = document.querySelector(".calc__button--clear");
+var deleteButton = document.querySelector(".calc__button--delete");
 var equalsButton = document.querySelector(".calc__button--equals");
 var previousDisplay = document.querySelector(".previous-display");
 var currentDisplay = document.querySelector(".current-display");
@@ -74,6 +75,12 @@ var onClearClick = function onClearClick(event) {
 };
 
 clearButton.addEventListener("click", onClearClick);
+
+var onDeleteClick = function onDeleteClick() {
+  currentDisplay.innerHTML = currentDisplay.innerHTML.slice(0, -1);
+};
+
+deleteButton.addEventListener("click", onDeleteClick);
 
 var onEqualsClick = function onEqualsClick(event) {
   if (typeof numberOne === "string" || typeof numberTwo === "string") {

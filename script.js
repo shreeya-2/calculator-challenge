@@ -43,10 +43,12 @@
 // global variables     
 const numberButtons = document.querySelectorAll (".calc__button--number");
 const operationButtons = document.querySelectorAll (".calc__button--operator");
-const clearButton = document.querySelector (".calc__button--clear")
+const clearButton = document.querySelector (".calc__button--clear");
+const deleteButton = document.querySelector (".calc__button--delete");
 const equalsButton = document.querySelector (".calc__button--equals");
 const previousDisplay = document.querySelector (".previous-display");
 const currentDisplay = document.querySelector (".current-display");
+
 let numberOne; 
 let chosenOperation;
 let numberTwo;
@@ -85,6 +87,13 @@ const onClearClick = (event) => {
 };
   
 clearButton.addEventListener("click",onClearClick);
+
+
+const onDeleteClick = () => {
+  currentDisplay.innerHTML= currentDisplay.innerHTML.slice(0, -1);
+};
+
+deleteButton.addEventListener("click",onDeleteClick);
 
 
 const onEqualsClick = (event) => {
