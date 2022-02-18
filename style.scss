@@ -1,10 +1,27 @@
 @use "./scss/base/typography.scss" as*;
 @use "./scss/base/base.scss" as*;
+@use "./scss/abstracts/mixins.scss" as*; 
 
 .calculator {
+  @media screen and (max-width:500px){
   max-width: 370px;
-  margin: 1.2rem;
+  position: fixed;
+  @include center-element(90%);
+  margin-left: 1.2rem;
+  margin-right: -1.2rem;
   margin-top: 5rem;
+  }
+
+  @media screen and (min-width:500px){
+    max-width: 370px;
+    position: fixed;
+    @include center-element(90%);
+    margin-left: 25rem;
+    margin-right: -25rem;
+    margin-top: 15rem;
+  }
+  
+
 
   .calculator__display {
     font-size: 2.5rem;
