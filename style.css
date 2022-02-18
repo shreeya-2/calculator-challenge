@@ -31,7 +31,7 @@ button {
 @media screen and (min-width: 700px) {
   .calculator {
     max-width: 370px;
-    position: fixed;
+    position: sticky;
     width: 90%;
     margin: 1.5rem;
     margin-left: 25%;
@@ -41,7 +41,7 @@ button {
 @media screen and (min-width: 1000px) {
   .calculator {
     max-width: 370px;
-    position: fixed;
+    position: sticky;
     width: 90%;
     margin: 1.5rem;
     margin-left: 50%;
@@ -156,7 +156,7 @@ input:checked + .slider:before {
   height: 2.25rem;
   text-indent: -0.28rem;
 }
-git add .calculator__buttons .calc__button--operator {
+.calculator__buttons .calc__button--operator {
   background-color: #FFDB82;
 }
 .calculator__buttons .calc__button--equals {
