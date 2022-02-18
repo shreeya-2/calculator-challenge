@@ -93,7 +93,6 @@ var onEqualsClick = function onEqualsClick(event) {
   switch (chosenOperation) {
     case '×':
       finalTotal = numberOne * numberTwo;
-      console.log("fired");
       break;
 
     case '÷':
@@ -106,6 +105,10 @@ var onEqualsClick = function onEqualsClick(event) {
 
     case '-':
       finalTotal = numberTwo - numberOne;
+      break;
+
+    case '%':
+      finalTotal = (numberOne / 100 * numberTwo).fixedTo(2);
       break;
   }
 
