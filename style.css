@@ -18,7 +18,7 @@ button {
   cursor: pointer;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   .calculator {
     max-width: 370px;
     position: fixed;
@@ -26,18 +26,27 @@ button {
     margin: 1rem;
     margin-left: 1.2rem;
     margin-right: -1.2rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
   .calculator {
     max-width: 370px;
     position: fixed;
     width: 90%;
     margin: 1rem;
-    margin-left: 25rem;
-    margin-right: -25rem;
-    margin-top: 15rem;
+    margin-left: 25%;
+    margin-top: 25%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .calculator {
+    max-width: 370px;
+    position: fixed;
+    width: 90%;
+    margin: 1rem;
+    margin-left: 50%;
+    margin-top: 20%;
   }
 }
 .calculator .calculator__display {
