@@ -180,3 +180,6 @@ input:checked + .slider:before {
   text-indent: -0.05rem;
   line-height: 5%;
 }
+.calculator__buttons .calc__button--percent {
+  background-color: #F5F5F5;
+}

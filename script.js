@@ -117,7 +117,9 @@ const onEqualsClick = (event) => {
       finalTotal= (numberTwo-numberOne);
       break;     
     case '%':
-      finalTotal= ((numberOne/100)*numberTwo);
+      console.log((numberTwo/100)*numberOne);
+      console.log(numberOne, numberTwo);
+      finalTotal= ((numberTwo/100)*numberOne);
       break;  
   } 
   currentDisplay.innerHTML = finalTotal; 
