@@ -34,14 +34,14 @@
 //OUTPUT total     
 //
 // global variables     
-var numberButtons = document.querySelectorAll(".calc__button--number");
-var operationButtons = document.querySelectorAll(".calc__button--operator");
-var clearButton = document.querySelector(".calc__button--clear");
-var deleteButton = document.querySelector(".calc__button--delete");
-var equalsButton = document.querySelector(".calc__button--equals");
-var previousDisplay = document.querySelector(".previous-display");
-var currentDisplay = document.querySelector(".current-display");
-var darkModeSwitch = document.querySelector(".switch");
+var numberButtons = document.querySelectorAll(".calculator__button--number");
+var operationButtons = document.querySelectorAll(".calculator__button--operator");
+var clearButton = document.querySelector(".calculator__button--clear");
+var deleteButton = document.querySelector(".calculator__button--delete");
+var equalsButton = document.querySelector(".calculator__button--equals");
+var previousDisplay = document.querySelector(".calculator__display--previous");
+var currentDisplay = document.querySelector(".calculator__display--current");
+var darkModeSwitch = document.querySelector(".calculator__switch");
 var numberOne;
 var chosenOperation;
 var numberTwo;

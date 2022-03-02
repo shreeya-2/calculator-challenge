@@ -41,14 +41,14 @@
 //
 
 // global variables     
-const numberButtons = document.querySelectorAll (".calc__button--number");
-const operationButtons = document.querySelectorAll (".calc__button--operator");
-const clearButton = document.querySelector (".calc__button--clear");
-const deleteButton = document.querySelector (".calc__button--delete");
-const equalsButton = document.querySelector (".calc__button--equals");
-const previousDisplay = document.querySelector (".previous-display");
-const currentDisplay = document.querySelector (".current-display");
-const darkModeSwitch = document.querySelector (".switch");
+const numberButtons = document.querySelectorAll (".calculator__button--number");
+const operationButtons = document.querySelectorAll (".calculator__button--operator");
+const clearButton = document.querySelector (".calculator__button--clear");
+const deleteButton = document.querySelector (".calculator__button--delete");
+const equalsButton = document.querySelector (".calculator__button--equals");
+const previousDisplay = document.querySelector (".calculator__display--previous");
+const currentDisplay = document.querySelector (".calculator__display--current");
+const darkModeSwitch = document.querySelector (".calculator__switch");
 
 let numberOne; 
 let chosenOperation;
